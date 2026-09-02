@@ -2,7 +2,7 @@
 name = "lejepa-tutorials"
 version = "0.1.0"
 requires-python = ">=3.10"
-dependencies = ["stable-pretraining"]
+dependencies = ["stable-pretraining", "datasets<4"]
 
 [tool.setuptools]
 py-modules = ["app", "debug_lewm", "inet10", "mmnist", "utils"]

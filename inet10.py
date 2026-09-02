@@ -27,8 +27,10 @@ def loader(split, batch_size, workers, views=1):
     transform = transforms.MultiViewTransform({f"view_{i}": crop() for i in range(views)})
     dataset = spt.data.HFDataset(
         "frgfm/imagenette",
+        "320px",
         split=split,
         transform=transform,
+        trust_remote_code=True,
     )
     return torch.utils.data.DataLoader(
         dataset,
