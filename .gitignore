@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+*.egg-info/
+data/
+runs/
+*.ckpt
+default_checkpoint.txt
