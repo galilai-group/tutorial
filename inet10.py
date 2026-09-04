@@ -26,7 +26,8 @@ def loader(split, batch_size, workers, views=1):
         )
     transform = transforms.MultiViewTransform({f"view_{i}": crop() for i in range(views)})
     dataset = spt.data.HFDataset(
-        "frgfm/imagenette",
+        "leandrodevai/imagenette-320px-resplit",
+        "320px",
         split=split,
         transform=transform,
     )
